@@ -1,0 +1,23 @@
+{
+  "name": "clothes-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fadalyz11/clothes-site.git"
+  },
+  "author": "KarmaDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fadalyz11/clothes-site/issues"
+  },
+  "homepage": "https://github.com/fadalyz11/clothes-site#readme",
+  "devDependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1"
+  }
+}
