@@ -2,7 +2,7 @@
   "name": "clothes-site",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/fadalyz11/clothes-site.git"
   },
-  "author": "KarmaDev",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fadalyz11/clothes-site/issues"
   },
   "homepage": "https://github.com/fadalyz11/clothes-site#readme",
   "devDependencies": {
-    "jquery": "^3.2.1",
-    "normalize.css": "^7.0.0"
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "node-normalize-scss": "^8.0.0",
+    "normalize-scss": "^7.0.1"
   }
 }
