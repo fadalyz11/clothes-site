@@ -1,0 +1,11 @@
+.page-section {
+  padding: 0.5rem 0;
+
+  @include atMedium {
+    padding: 2.5rem 0;
+  }
+  &--blue {
+    background-color: $mainBlue;
+    color: $white-color;
+  }
+}
