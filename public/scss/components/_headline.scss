@@ -3,7 +3,9 @@
 
   font-weight: 300;
   color: $mainBlue;
-
+  &__nomargin-t {
+    margin-top: 0;
+  }
   @include atSmall {
     font-size: 2.875rem;
   }

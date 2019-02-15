@@ -7,14 +7,28 @@
     padding-right: 65px;
   }
 
+  &__mg-b-untill-md {
+    margin-bottom: 1rem;
+  }
   @include atMedium {
+    &__mg-b-untill-md {
+      margin-bottom: 0;
+    }
+
     &__medium-col-1-of-3 {
       float: left;
       width: 33.33%;
     }
+
+    &__medium-col-1-of-3-lg {
+      width: 37%;
+    }
     &__medium-col-2-of-3 {
       float: left;
       width: 66.66%;
+    }
+    &__medium-col-2-of-3-sm {
+      width: 63%;
     }
   }
 }
