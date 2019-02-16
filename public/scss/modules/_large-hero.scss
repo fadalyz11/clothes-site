@@ -15,7 +15,7 @@
     width: 100%;
     text-align: center;
 
-    @mixin atMedium {
+    @include atMedium {
       padding-top: 60px;
     }
   }
@@ -25,11 +25,10 @@
     color: $mainBlue;
     margin: 0;
     font-size: 2.4rem;
-  
-    @mixin atSmall {
+
+    @include atSmall {
       font-size: 4.8rem;
     }
-
   }
 
   &__subtitle {
@@ -38,24 +37,22 @@
     font-size: 1.5rem;
     margin: 0;
 
-    @mixin atSmall {
+    @include atSmall {
       font-size: 2.9rem;
     }
-
   }
 
   &__description {
-    color: #FFF;
+    color: #fff;
     font-size: 1.1rem;
     font-weight: 100;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
     max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
 
-    @mixin atSmall {
+    @include atSmall {
       font-size: 1.875rem;
     }
   }
-
 }
