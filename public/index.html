@@ -8,7 +8,6 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="dist/styles.css" />
     <title>Clear View Escapes</title>
     <meta
       name="keywords"
@@ -18,23 +17,10 @@
       name="description"
       content="Your clarify. One trip away. We create soul restoring journeys that inspire you to be you."
     />
+
+    <link rel="stylesheet" href="dist/styles.css" />
   </head>
   <body>
-    <ul>
-      10
-    </ul>
-    <ul>
-      10
-    </ul>
-    <ul>
-      10
-    </ul>
-    <ul>
-      10
-    </ul>
-    <p>helloooo</p>
-    <div>kdjSKDJKJ</div>
-
     <header>
       <img src="css/images/icons/clear-view-escapes.svg" />
       <a href="#" class="btn">Get in Touch</a>
@@ -54,68 +40,75 @@
             css/images/hero--large.jpg        1920w,
             css/images/hero--large-hi-dpi.jpg 3840w
           "
-          media="(min-width:1380px)"
+          media="(min-width: 1380px)"
         />
         <source
           srcset="
             css/images/hero--medium.jpg        1380w,
             css/images/hero--medium-hi-dpi.jpg 2760w
           "
-          media="(min-width:990px)"
+          media="(min-width: 990px)"
         />
         <source
           srcset="
             css/images/hero--small.jpg         990w,
             css/images/hero--small-hi-dpi.jpg 1980w
           "
-          media="(min-width:640px)"
+          media="(min-width: 640px)"
         />
         <img
-          class="large-hero__image"
           srcset="
             css/images/hero--smaller.jpg         640w,
             css/images/hero--smaller-hi-dpi.jpg 1280w
           "
-          alt="Costal view of ocean and mountains"
+          alt="Coastal view of ocean and mountains"
+          class="large-hero__image"
         />
       </picture>
+
       <div class="large-hero__text-content">
         <div class="wrapper">
-          <h1 class="large-hero__title">Your clarity!!!</h1>
+          <h1 class="large-hero__title">Your clarity.</h1>
           <h2 class="large-hero__subtitle">One trip away.</h2>
           <p class="large-hero__description">
             We create soul restoring journeys that inspire you to be you.
           </p>
           <p>
-            <a class="btn btn--orange btn--large" href="#">Get Started Today</a>
+            <a href="#" class="btn btn--orange btn--large">Get Started Today</a>
           </p>
         </div>
       </div>
     </div>
 
-    <div id="our-beginning " class="page-section">
+    <div id="our-beginning" class="page-section">
       <div class="wrapper">
-        <h2 class="headline  headline__light headline__centred b-margin-small">
+        <h2
+          class="headline headline--centered headline--light headline--b-margin-small"
+        >
           The first trip we planned <strong>was our own.</strong>
         </h2>
         <h3
-          class="headline headline__light headline__centred headline__orange headline__small headline__narrow b-margin-large"
+          class="headline headline--centered headline--orange headline--small headline--narrow headline--light headline--b-margin-large"
         >
           Ever since, we&rsquo;ve been working to make travel
           <strong>better for everyone.</strong>
         </h3>
-        <div class="wrapper wrapper__medium wrapper__margin-b">
+
+        <div class="wrapper wrapper--medium wrapper--b-margin">
           <img
-            sizes="(min-width:970px) 976, 100vw"
-            srcset="css/images/first-trip-low-res.jpg 565,
-            css/images/first-trip.jpg 976w,
-            css/images/first-trip-hi-dpi 1952w.jpg"
+            sizes="(min-width: 970px) 976px, 100vw"
+            srcset="
+              css/images/first-trip-low-res.jpg  565w,
+              css/images/first-trip.jpg          976w,
+              css/images/first-trip-hi-dpi.jpg  1952w
+            "
             alt="Couple walking down a street."
           />
         </div>
-        <div class="row row__gutter ">
+
+        <div class="row row--gutters">
           <div
-            class="row__medium-col-1-of-3 row__medium-col-1-of-3-ls row__mg-b-untill-md"
+            class="row__medium-4 row__medium-4--larger row__b-margin-until-medium"
           >
             <picture>
               <source
@@ -124,7 +117,7 @@
                   css/images/our-start.jpg        404w,
                   css/images/our-start-hi-dpi.jpg 808w
                 "
-                media="(min-width:1020px)"
+                media="(min-width: 1020px)"
               />
               <source
                 sizes="320px"
@@ -132,21 +125,20 @@
                   css/images/our-start-portrait.jpg        382w,
                   css/images/our-start-portrait-hi-dpi.jpg 764w
                 "
-                media="(min-width:800px)"
+                media="(min-width: 800px)"
               />
               <img
                 srcset="
                   css/images/our-start-landscape.jpg         800w,
                   css/images/our-start-landscape-hi-dpi.jpg 1600w
                 "
-                alt="Our founder"
+                alt="Our founder, Jane Doe"
               />
             </picture>
           </div>
-          <div class="row__medium-col-2-of-3 row__medium-col-2-of-3-sm">
-            <p></p>
-            <div class="content-container">
-              <h2 class="headline headline__nomargin-t">
+          <div class="row__medium-8 row__medium-8--smaller">
+            <div class="generic-content-container">
+              <h2 class="headline headline--no-t-margin">
                 Here&rsquo;s how we got started&hellip;
               </h2>
               <p>
@@ -179,44 +171,64 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div id="features" class="page-section page-section--blue">
-        <div class="wrapper">
-          <img src="css/images/icons/star.svg" />
-          <h2>Our Features</h2>
+    <div id="features" class="page-section page-section--blue">
+      <div class="wrapper">
+        <h2 class="section-title">
+          <img class="section-title__icon" src="css/images/icons/star.svg" />
+          Our <strong>Features</strong>
+        </h2>
 
-          <img src="css/images/icons/rain.svg" />
-          <h3>We&rsquo;ll Watch the Weather</h3>
-          <p>
-            Download our app and we&rsquo;ll send you a notice if it&rsquo;s
-            about to rain in the next 20 minutes around your current location. A
-            good rain can be refreshing, but sometimes you just want to stay
-            dry.
-          </p>
+        <div class="row row--gutters-large generic-content-container">
+          <div class="row__medium-6">
+            <div class="feature-item">
+              <img class="feature-item__icon" src="css/images/icons/rain.svg" />
+              <h3 class="feature-item__title">We&rsquo;ll Watch the Weather</h3>
+              <p>
+                Download our app and we&rsquo;ll send you a notice if it&rsquo;s
+                about to rain in the next 20 minutes around your current
+                location. A good rain can be refreshing, but sometimes you just
+                want to stay dry.
+              </p>
+            </div>
 
-          <img src="css/images/icons/globe.svg" />
-          <h3>Global Guides</h3>
-          <p>
-            We&rsquo;ve scoured the entire planet for the best retreats and
-            beautiful vistas. If there&rsquo;s a corner of the world you want to
-            escape to we know the most scenic and inspiring locations.
-          </p>
+            <div class="feature-item">
+              <img
+                class="feature-item__icon"
+                src="css/images/icons/globe.svg"
+              />
+              <h3 class="feature-item__title">Global Guides</h3>
+              <p>
+                We&rsquo;ve scoured the entire planet for the best retreats and
+                beautiful vistas. If there&rsquo;s a corner of the world you
+                want to escape to we know the most scenic and inspiring
+                locations.
+              </p>
+            </div>
+          </div>
 
-          <img src="css/images/icons/wifi.svg" />
-          <h3>Wi-Fi Waypoints</h3>
-          <p>
-            We only send you on trips to places we can personally vouch for as
-            being amazing. Which means we&rsquo;ve mapped out where local wi-fi
-            spots are and marked them in our app&rsquo;s map view.
-          </p>
+          <div class="row__medium-6">
+            <div class="feature-item">
+              <img class="feature-item__icon" src="css/images/icons/wifi.svg" />
+              <h3 class="feature-item__title">Wi-Fi Waypoints</h3>
+              <p>
+                We only send you on trips to places we can personally vouch for
+                as being amazing. Which means we&rsquo;ve mapped out where local
+                wi-fi spots are and marked them in our app&rsquo;s map view.
+              </p>
+            </div>
 
-          <img src="css/images/icons/fire.svg" />
-          <h3>Survival Kit</h3>
-          <p>
-            Everytime you book an escape with us we send you a survival kit with
-            the finest materials. The kit will allow you to setup a tent, start
-            a fire, scratch your own back and lower your taxes.
-          </p>
+            <div class="feature-item">
+              <img class="feature-item__icon" src="css/images/icons/fire.svg" />
+              <h3 class="feature-item__title">Survival Kit</h3>
+              <p>
+                Everytime you book an escape with us we send you a survival kit
+                with the finest materials. The kit will allow you to setup a
+                tent, start a fire, scratch your own back and lower your taxes.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -262,7 +274,7 @@
     <footer>
       <p>
         Copyright &copy; 2016 Clear View Escapes. All rights reserved.
-        <a class="btn btn--orange" href="#">Get in Touch</a>
+        <a href="#" class="btn btn--orange">Get in Touch</a>
       </p>
     </footer>
   </body>
