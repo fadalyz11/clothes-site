@@ -1,44 +1,24 @@
 const gulp = require("gulp");
-const svgSprite = require("gulp-svg-sprite");
-const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const imageminPngquant = require("imagemin-pngquant");
+const imageminJpegRecompress = require("imagemin-jpeg-recompress");
 
-const config = {
-  mode: {
-    css: {
-      render: {
-        scss: { template: "./gulp/templates/sprite.css" }
-      }
-    }
-  }
-};
-
-Sprites = () => {
-  gulp.task("createSprite", function() {
+imageMin = () => {
+  gulp.task("images", function() {
     return gulp
-      .src("./public/css/images/icons/**/*.svg")
-      .pipe(svgSprite(config))
-      .pipe(gulp.dest("./public/css/sprite/"));
+      .src("public/css/images/**/*.{png,jpeg,jpg,svg,gif}")
+      .pipe(
+        imagemin([
+          imagemin.gifsicle(),
+          imagemin.jpegtran(),
+          imagemin.optipng(),
+          imagemin.svgo(),
+          imageminPngquant(),
+          imageminJpegRecompress()
+        ])
+      )
+      .pipe(gulp.dest("public/dist" + "/images"));
   });
 };
 
-SpritesCopy = () => {
-  Sprites();
-  gulp.task("copySpriteScss", gulp.series("createSprite"), function() {
-    return gulp
-      .src("./public/css/sprite/css/*.scss")
-      .pipe(rename("_sprite.scss"))
-      .pipe(gulp.dest("./public/scss/modules"));
-  });
-};
-
-Combination = () => {
-  SpritesCopy();
-  Sprites();
-
-  gulp.task("icon", gulp.series("createSprite", "copySpriteScss"), cb =>
-    console.log("whats wrong")
-  );
-};
-module.exports = Sprites();
-module.exports = SpritesCopy();
-module.exports = Combination();
+module.exports = imageMin();
