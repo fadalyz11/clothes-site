@@ -1,23 +1,12 @@
 const gulp = require("gulp");
 const svgSprite = require("gulp-svg-sprite");
-// const rename = require("gulp-rename");
+const rename = require("gulp-rename");
+
 const config = {
-  // shape: {
-  //   dimension: {
-  //     // Set maximum dimensions
-  //     maxWidth: 32,
-  //     maxHeight: 32
-  //   },
-  //   spacing: {
-  //     // Add padding
-  //     padding: 10
-  //   },
-  // dest: "./public/dist/sprite/", // Keep the intermediate files
-  // },
   mode: {
     css: {
       render: {
-        scss: { template: "./gulp/templates/sprite.scss" }
+        scss: { template: "./gulp/templates/sprite.css" }
       }
     }
   }
@@ -26,15 +15,30 @@ const config = {
 Sprites = () => {
   gulp.task("createSprite", function() {
     return gulp
-      .src("public/css/images/icons/**/*.svg")
+      .src("./public/css/images/icons/**/*.svg")
       .pipe(svgSprite(config))
-      .pipe(gulp.dest("./public/dist/sprite/"));
+      .pipe(gulp.dest("./public/css/sprite/"));
   });
 };
 
-gulp.task("copySpriteScss", function() {
-  return gulp
-    .src("./public/dist/sprite/css/*.scss")
-    .pipe(gulp.dest("public/scss/modules"));
-});
+SpritesCopy = () => {
+  Sprites();
+  gulp.task("copySpriteScss", gulp.series("createSprite"), function() {
+    return gulp
+      .src("./public/css/sprite/css/*.scss")
+      .pipe(rename("_sprite.scss"))
+      .pipe(gulp.dest("./public/scss/modules"));
+  });
+};
+
+Combination = () => {
+  SpritesCopy();
+  Sprites();
+
+  gulp.task("icon", gulp.series("createSprite", "copySpriteScss"), cb =>
+    console.log("whats wrong")
+  );
+};
 module.exports = Sprites();
+module.exports = SpritesCopy();
+module.exports = Combination();
